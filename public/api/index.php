@@ -53,7 +53,6 @@ $app->get('/pet/{_id}', function (Request $request, Response $response, $args) {
     $p = $petsController->getPetById($pet_id);
     $response->getBody()->write(var_export($p, true));
 
-//    $response = $this->view->render($response, "petdetail.phtml", ["p" => $p]);
     return $response->withJson($p);
 
 })->setName('pet-detail');
