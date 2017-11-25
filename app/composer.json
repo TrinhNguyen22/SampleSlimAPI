@@ -1,0 +1,14 @@
+{
+    "require": {
+        "slim/slim": "^3.0",
+        "catfan/Medoo": "^1.4",
+        "slim/php-view": "^2.2",
+        "monolog/monolog": "^1.17",
+        "robmorgan/phinx": "^0.5.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "": "app/"
+        }
+    }
+}

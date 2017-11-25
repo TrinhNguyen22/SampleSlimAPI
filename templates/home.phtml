@@ -1,0 +1,42 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Simple Slim API</title>
+    <link rel="stylesheet" type="text/css" href="../../templates/css/style.css">
+
+</head>
+<body>
+<?php
+if (count($pets) > 0):
+    ?>
+    <div class="page-wrap">
+        <h1>All Pets</h1>
+        <div id="pets-container">
+
+            <?php foreach ($pets as $pet): ?>
+                <div class="pet">
+                    <div class="photo-column">
+                        <img src="<?=$pet['photo'] ?>">
+                    </div>
+                    <div class="info-column">
+                        <h2><?=$pet['name'] ?></h2>
+                        <p>Age: <?=$pet['birthYear'] ?></p>
+                        <h3 class="headline-bar">Favorite Foods</h3>
+                        <ul class="favorite-foods">
+                            <li><?=$pet['favFoods'] ?></li>
+                        </ul>
+
+                    </div>
+                </div>
+            <?php endforeach; ?>
+        </div>
+    </div>
+<?php else: ?>
+
+    <p>No current pets</p>
+
+<?php endif; ?>
+</body>
+</html>
